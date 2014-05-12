@@ -1,0 +1,71 @@
+<html>
+<head>
+	
+  <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  
+
+<script type="text/javascript">
+
+
+	var kml = {
+	    ground1: {
+			type: "ground",
+	        name: "1900 Minneapolis Map",
+			url: "http://www.efwjames.com/tcrd/Mpls1900map.jpg",
+			opacity: 0.5,
+			lat1: 44.925,
+			long1: -93.316,
+			lat2: 45.019,
+			long2: -93.211
+	    }
+	};
+
+
+function loadMap() { 
+
+var mpls = new google.maps.LatLng(kml["ground1"].lat2, kml["ground1"].long2);
+
+var mapOptions = {
+  zoom: 14,
+  center: mpls,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+}
+
+var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+
+var imageBounds = new google.maps.LatLngBounds(
+    new google.maps.LatLng(kml["ground1"].lat1,kml["ground1"].long1),
+    new google.maps.LatLng(kml["ground1"].lat2,kml["ground1"].long2)
+);	
+
+var overlayOpts = {
+	opacity: 0.6
+}
+
+var ground1map = new google.maps.GroundOverlay(
+	kml["ground1"].url, 
+	imageBounds, overlayOpts);
+
+ground1map.setMap(map);
+
+};
+
+
+
+$(document).ready(function(){
+
+$("#stuff").text(kml["ground1"].bounds2);
+
+});
+
+</script>
+</head>
+<body onload="loadMap();">
+	
+	<div id="map_canvas" style="width: 100%; height: 700px;"></div>
+	
+	<div id="stuff"></div>
+		</body>
+		
+		</html>

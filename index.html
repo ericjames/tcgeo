@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Twin Cities History in Maps :: Complete Places Exhibit</title>
+
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="image_src" href="facebook.png">
+
+<link rel="stylesheet" href="css/style.css">
+<meta http-equiv="content-script-type" content="text/javascript">
+
+
+  <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="js/modal.js"></script>
+
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" src="js/tcgmap.js"></script>
+
+  </script defer type="text/javascript" src="js/modernizr.js"></script>
+
+</head>
+<body onload="loadMap(); startup();">
+	<div id="mask"></div>
+			
+		<div id="container">
+			
+		<header id="page_header"><h1 id="logo"><a href="#cp" name="modal">CP</a></h1>
+			<span id="title">Twin Cities History in Maps</span>
+			
+			<nav id="alpha">
+				<a href="#intro" name="modal">About this Exhibit</a>
+				
+				<a href="#about" name="modal">The Author</a>
+				<a href="#join" name="modal">Help Edit</a>
+				
+				</nav>
+			</header>
+			
+<section id="map_content">
+
+<header id="map_header"> <div id="infobar"></div> </header>
+	
+  <div id="panorama_canvas"></div>
+  <div id="map_canvas"></div>
+
+	<a href="#" id="streetview_close" class="button">Exit Street View</a>
+	<article id="content_window"></article>
+
+</section>
+
+
+<!-- PAGES -->
+
+<section id="cp" class="window">
+ 	  <a href="#" class="close button">Close Window</a>
+	<article>
+		<h1>Complete Places</h1>
+		This is an exhibit of <a href="http://completeplaces.com">Complete Places</a>, Urbanism Past, Present &amp; Future
+
+	</article>
+</section>
+
+	
+	<section id="intro" class="window">
+ 	  <a href="#" class="close button">Close Window</a>
+		<article>
+<h1>About this Exhibit</h1>
+<strong>Twin Cities History in Maps.</strong>
+
+<p>
+Presented are residential districts based off 1983 text and renderings in the quintessential Twin Cities urban theory book <em>Where We Live</em>. Authors Judith Martin &amp; David Lanegran determined these districts as being related by environment, architecture, aesthetic, and physical factors. Residents are unified by their "similar hopes and experiences" such as social, economic, and ethnic ties.  These "districts" can surpass official neighborhood boundaries, and can define a more organic map of how the Twin Cities evolved. Contrasted with these maps are historical maps and street lines to allow users to understand how history has shaped into these destinies. </p>
+
+<p>Within each district definition are blocks which when clicked on can deliver additional information and hot spots in the neighborhoods which contribute to the district.</p>
+
+<h2>Residential Districts (M&amp;L 1983)</h2>
+	<h3>Aging Inner Ring</h3>
+	<ul>
+		<li>Pre-1900 streetcar landscape
+			<li>Housing between 1880 and 1910
+				<li>Originally clerical and white-collar aspirations
+					<li>Now stable working class or young
+						<li>Both well maintained and blighted
+	</ul>
+		
+		<h3>Protected Genteel Zone</h3>
+			<ul>
+				<li>Close to Downtowns, built around 1900
+				<li>Interesting architecture, local emphasis on leisure/arts
+					<li>Originally upper-middle and upper classes, first families
+						<li>Now white-collar, financially secure, well-to-do families
+			</ul>
+
+		<h3>Rebuilt Zone</h3>
+		
+		<ul><li>Built before 1900 on border of Downtowns
+			<li>Significant early decline (1920s)
+				<li>Small frame houses now replaced with high-rises. multi-family, single-family
+					<li>Originally industrial workers, day laborers, clerical
+			<li>Now all incomes from poor to financially secure
+				</ul>
+				
+		<h3>Turnaround Zone</h3>
+		<ul>
+			<li>Similar to Rebuilt districts, 1900s
+			<li>"Rediscovered" large homes, Victorian or trend styles
+			<li>Increasing amounts of in-fill townhomes, condos
+			<li>Originally middle to upper middle class
+				<li>Now financially secure or up-and-coming, gentrification
+		</ul>
+
+		<h3>Settled Mid-City Zone</h3>
+		<ul>
+			<li>Built between 1900 and 1920
+				<li>Multiple types of housing both small and large
+				<li>Originally solidly middle class
+				<li>Now still middle class, stable working-class
+				<li>The typical "older urban neighborhood"
+					</ul>
+			<h3>Prewar Grid Zone</h3>
+			<ul>
+				<li>On the fringe of streetcar service, built after 1920
+					<li>Auto-orientated
+						<li>Stucco bungalows
+							<li>Remains blue-collar, clerical
+						<li>High home maintenance
+			</ul>
+			<h3>Prewar Amenity Zone</h3>
+			<ul>
+				<li>Resemble the prewar grid, built after 1920
+					<li>Near recreational auto uses
+					<li>Amenities such as lakes, hills, creeks, parks
+						<li>Midwestern Revival architecture
+							<li>Above average incomes, mobile families, professionals
+			</ul>
+			<h3>Suburban-in-City Zone</h3>
+			<ul>
+				<li>Located at edges of cities built post-war, late 1940s-1960s
+				<li>Postwar suburban styles: ranches, ramblers, brick bungalows, Cape Cods
+				<li>Middle-class, white-collar, stable
+				<li>Matured over time, resembles rest of city</li>
+			</ul>
+		
+			</article>
+		</section>
+
+	<section id="about" class="window">
+ 	  <a href="#" class="close button">Close Window</a>
+		<article>
+			
+			<h1>From the Curator</h1>
+			
+			<blockquote>
+	"We hope to heighten readers' appreciation for the special qualities of each area and to provide them with an understanding of the processes that have shaped the growth of these two cities." - 			<em>Where We Live: The Residential Districts of Minneapolis and Saint Paul, Martin &amp; Lanegran 1983</em><br />
+				</blockquote>
+				
+		<p><em>Where We Live</em> was published in 1983 when the Twin Cities was barely a glimmer in the nation's eye. Half the highways did not exist, and the beltway signaled the boundary of sprawl. Professors Judith Martin and David Lanegran were still emerging into regarded Minnesota geographers.  The book has stood the test of time, as it was and is still a recommended listing on various University of Minnesota course readings including the eponymous offering Geography of the Twin Cities. The intricate history of where we live defines a past and present rich and unique. This project regards this knowledge as a critical tool to understanding our future as a region.
+		</p>
+		
+		<div class="clearfix"></div>
+		
+		<h2>From the Curator-Developer</h2>
+		
+		<p>When I learned of Judith Martin's passing, I was devastated over the loss of an enormous voice who carried a great legacy of urbanists and geographers &mdash; the arguable "Twin Cities School" of urban cultural geography. After the department reception, a copy of <em>Where We Live</em> had been left out in the MURP Lab.  I opened it and inside she had autographed, "To Barbara, With thanks for the inspiration you've been." This book had been a gift to Barbara L. Lukermann, a pioneer of urban planning who too had just passed in 2009.  I realized a proper homage to a great mentor would be to build a project that furthers this legacy of knowledge for the new century of internet medium.  I also was inspired by David Lanegran's recent book Minnesota on the Map, honoring the state's sesquicentennial with vivid historical "GIS" imagery.  A co-author of <em>Where We Live</em>, Lanegran is a distinguished, honored, and active professor, currently geography chair at Macalester College in the other Twin City, Saint Paul.
+</p>
+
+<p>- <a href="http://efwjames.com">Eric F.W. James</a> is a 2006 graduate of the Urban Studies department at the University of Minnesota. He holds a Masters in Urban and Regional Planning from the Humphrey School of Public Affairs. This app is one of many synthesis projects realizing urban planning theory through web technologies.</em>
+</p>
+
+<h2>Technologies Used</h2>
+<p>Google Maps API provides the base upon which this map application is built. Javascript and jQuery provides functionality. The page is coded in HTML5/CSS3 and makes use of native webkit functions. 
+
+</article>
+</section>
+
+<section id="join" class="window">
+<a href="#" class="close button">Close Window</a>
+<article>
+	<h1>Help Edit</h1>
+	<p>
+	Help build this exhibit.  If you're interested in editing, please contact me. Urban Studies, Geography, Architecture, or Housing Studies undergraduates and graduates preferred. Gaining access is as easy as being invited to the Google Maps on which these are hosted on. Contact me at <a href="mailto:jame0182@umn.edu">jame0182@umn.edu</a> to request. </p>
+	
+
+
+</article>
+
+</section>
+
+<div id="main"> 
+	<h2>Districts</h2>
+	<div id="mapcontrolbox"></div> 
+</div>
+
+<footer id="footer">
+	
+</footer>
+</div>
+</body>
+</html>

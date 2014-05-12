@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Twin Cities Residential Development Patterns</title>
+
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="stylesheet" href="css/style.css">
+
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+<script type="text/javascript">
+
+function initialize() {
+  	  displayMaps();
+}
+
+/* Gimme some style */
+
+var styleArray = [
+  {
+    featureType: "road.highway",
+    stylers: [
+      { hue: "#000" },
+      { saturation: -20 }
+    ]
+  },{
+    featureType: "road",
+    stylers: [
+      { saturation: -60 }
+    ]
+  },{
+    featureType: "road",
+	elementType: "labels",
+    stylers: [
+      { visibility: "on" }
+    ]
+  },{
+    featureType: "transit.station.bus",
+    elementType: "labels",
+    stylers: [
+      { visibility: "on" }
+    ]
+  },{
+    featureType: "poi.park",
+    stylers: [
+      { visibility: "on" },
+      { hue: "#00ff33" },
+      { lightness: -10 },
+      { saturation: 60 }
+    ]
+  },{
+    featureType: "road.highway",
+    elementType: "labels",
+    stylers: [
+      { visibility: "off" }
+    ]
+  },
+];
+
+/* Map function */
+
+
+  function displayMaps() {
+  var myLatlng = new google.maps.LatLng(44.961154,-93.209381);
+  var myOptions = {
+    zoom: 12,
+    center: myLatlng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+	styles: styleArray,
+	mapTypeControl: true,
+    mapTypeControlOptions: {
+        style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+        position: google.maps.ControlPosition.TOP_LEFT
+    },
+    
+  }
+
+  var map = new google.maps.Map(
+      document.getElementById("map_canvas"),
+      myOptions);
+
+	/********************************************************************/
+
+
+	/********************************************************************/
+
+  	if (document.mapcontrol.district2.checked) {	
+
+		/* Load the layer */
+  		var layer2 = new google.maps.KmlLayer('http://www.google.com/maps/ms?mpa=0&authuser=0&ctz=300&mpf=0&vps=30&ie=UTF8&msa=0&output=kml&msid=212971981154994583939.0004affc615e9dd093118', {suppressInfoWindows: true});
+
+		layer2.setMap(map); 
+
+  		layer2.set('preserveViewport', true); 
+
+	
+  	};
+
+	/********************************************************************/
+
+  	if (document.mapcontrol.district3.checked) {	
+
+		/* Load the layer */
+  		var layer3 = new google.maps.KmlLayer('http://www.google.com/maps/ms?mpa=0&authuser=0&ctz=300&mpf=0&vps=39&ie=UTF8&msa=0&output=kml&msid=212971981154994583939.0004afece67dd83f7299c', {suppressInfoWindows: true});
+
+		layer3.setMap(map); 
+
+  		layer3.set('preserveViewport', true); 
+
+	
+  	};
+
+	/********************************************************************/
+
+  	if (document.mapcontrol.district4.checked) {	
+
+		/* Load the layer */
+  		var layer4 = new google.maps.KmlLayer('http://www.google.com/maps/ms?mpa=0&authuser=0&ctz=300&mpf=0&vps=34&ie=UTF8&msa=0&output=kml&msid=212971981154994583939.0004afd4b1a6864d11987', {suppressInfoWindows: true});
+
+		layer4.setMap(map); 
+
+  		layer4.set('preserveViewport', true); 
+
+	
+  	};
+
+	/********************************************************************/
+
+  	if (document.mapcontrol.district5.checked) {	
+
+		/* Load the layer */
+  		var layer5 = new google.maps.KmlLayer('http://www.google.com/maps/ms?mpa=0&authuser=0&ctz=300&mpf=0&vps=28&ie=UTF8&msa=0&output=kml&msid=212971981154994583939.0004affd0be58daf242f0', {suppressInfoWindows: true});
+
+		layer5.setMap(map); 
+
+  		layer5.set('preserveViewport', true); 
+
+	
+  	};
+
+	/********************************************************************/
+
+  	if (document.mapcontrol.district6.checked) {	
+
+		/* Load the layer */
+  		var layer6 = new google.maps.KmlLayer('http://www.google.com/maps/ms?mpa=0&authuser=0&ctz=300&mpf=0&vps=42&ie=UTF8&msa=0&output=kml&msid=212971981154994583939.0004affe4b59a3b9f4ba0', {suppressInfoWindows: true});
+
+		layer6.setMap(map); 
+
+  		layer6.set('preserveViewport', true); 
+
+	
+  	};
+
+	/********************************************************************/
+
+  	if (document.mapcontrol.district7.checked) {	
+
+		/* Load the layer */
+  		var layer7 = new google.maps.KmlLayer('http://www.google.com/maps/ms?mpa=0&authuser=0&ctz=300&mpf=0&vps=16&ie=UTF8&msa=0&output=kml&msid=212971981154994583939.0004afff246d2c60ac672', {suppressInfoWindows: true});
+
+		layer7.setMap(map); 
+
+  		layer7.set('preserveViewport', true); 
+
+	
+  	};
+
+	/********************************************************************/
+
+  	if (document.mapcontrol.district8.checked) {	
+
+		/* Load the layer */
+  		var layer8 = new google.maps.KmlLayer('http://www.google.com/maps/ms?mpa=0&authuser=0&ctz=300&mpf=0&vps=44&ie=UTF8&msa=0&output=kml&msid=212971981154994583939.0004afffbc3e042ebec8d', {suppressInfoWindows: true});
+
+		layer8.setMap(map); 
+
+  		layer8.set('preserveViewport', true); 
+
+	
+  	};
+
+
+
+
+	/* Listener  
+	 
+	
+		for (var i = 1; i < layer.length; i++) {
+			var layers = layer[i]; 
+		google.maps.event.addListener(layers, 'click', function(kmlEvent) {
+		    var text = kmlEvent.featureData.description;
+		    showContentWindow(text);
+		});
+	}
+	*******************************************************************/
+
+	for (var i = 1; i < layer.length; i++) {
+		var layers = layer[i];
+	 google.maps.event.addListener(layers, 'click', function(kmlEvent) {
+	    var text = kmlEvent.featureData.description;
+	    showContentWindow(text);
+	  });
+	}
+	
+
+
+	  function showContentWindow(text) {
+	    var sidediv = document.getElementById('content_window');
+	    sidediv.innerHTML = text;
+	  };
+	
+
+}; //end displayMaps
+
+
+
+function displaylayer1() {
+	var map = new google.maps.Map(document.getElementById("map_canvas"), myOpt);
+	var layer1 = new google.maps.KmlLayer('http://www.google.com/maps/ms?mpa=0&authuser=0&ctz=300&mpf=0&vps=32&ie=UTF8&msa=0&output=kml&msid=212971981154994583939.0004afee1a9006c764fbc', {suppressInfoWindows: true, map:map, preserveViewport: true});
+	layer1.setMap(map);
+ 	};
+
+
+/* Append Class on Select ******************************************************************/
+
+function highlight(box, obj) {
+     var selected = 'selected';
+     var normal = '';
+     document.getElementById(obj).className = (box.checked ? selected : normal);
+};
+
+
+</script>
+</head>
+<body onload="initialize()">
+		
+		<div id="container">
+			
+		<header><h1 id="logo">TC RESIDENT</h1><strong>Twin Cities Residential Development and Emerging Node Trends</strong></header>
+		
+  <div id="map_canvas"></div>
+
+
+	<div id="main">
+
+		<div id="mapcontrolbox">
+		<form name="mapcontrol">
+		<ul>
+
+
+			<li id="row1">
+				<input type="checkbox" name="district1" value="district1" onclick="highlight(this,'row1'); displaylayer1();" />
+		      <label class="mapoption">Rebuilt<label>
+			</li>
+
+
+			<li id="row2">
+				<input type="checkbox" name="district2" value="district2" onclick="highlight(this,'row2'); displayMaps();" />
+		      <label class="mapoption">Turnaround<label>
+			</li>
+
+
+			<li id="row3">
+				<input type="checkbox" name="district3" value="district3" onclick="highlight(this,'row3'); displayMaps();" />
+		      <label class="mapoption">Aging Inner Ring<label>
+			</li>
+
+
+			<li id="row4">
+				<input type="checkbox" name="district4" value="mpl4" onclick="highlight(this,'row4'); displayMaps();" />
+		      <label class="mapoption">Protected Genteel<label>
+			</li>
+
+
+			<li id="row5">
+				<input type="checkbox" name="district5" value="district5" onclick="highlight(this,'row5'); displayMaps();" />
+		      <label class="mapoption">Settled Mid-City<label>
+			</li>
+
+
+			<li id="row6">
+				<input type="checkbox" name="district6" value="district6" onclick="highlight(this,'row6'); displayMaps();" />
+		      <label class="mapoption">Prewar Grid<label>
+			</li>
+
+			<li id="row7">
+				<input type="checkbox" name="district7" value="district7" onclick="highlight(this,'row7'); displayMaps();" />
+		      <label class="mapoption">Prewar Amenity<label>
+			</li>
+
+			<li id="row8">
+				<input type="checkbox" name="district8" value="district8" onclick="highlight(this,'row8'); displayMaps();" />
+		      <label class="mapoption">Suburban-in-City<label>
+			</li>
+
+			
+			
+			
+			</ul>
+		</form>
+		</div>
+
+  <article id="content_window">
+  		
+			</article>
+	
+
+  </div>
+
+<footer></footer>
+</div>
+</body>
+</html>
